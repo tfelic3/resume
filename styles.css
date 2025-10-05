@@ -1,0 +1,200 @@
+body{
+    margin: 2rem 7rem;
+     font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+ 
+ 
+}
+
+.resumeBody{
+    max-width: 1100px;
+    margin: 0 auto; 
+}
+
+.intro{
+    display:flex; 
+    width: auto;
+    justify-content:space-between;
+    height: auto;
+}
+
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+
+
+.intro + hr{
+    height: .2rem;
+    border: none;
+    background-color: #000;
+}
+
+
+.expanderButton{
+    background-color: transparent;
+    border: none; 
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nonExpanderButton{
+  background-color: transparent;
+    border: none; 
+    text-align: left;
+    font-size: 16px;
+    display: block;
+}
+
+.expander{
+    margin: 0 auto;
+    width: 900px;
+    background-color: green;
+}
+
+
+
+
+.buttonVisualContainer{
+    display: flex;
+   gap: 1rem;
+   align-items: baseline;
+}
+
+
+
+
+.bullet{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    align-self: baseline;
+    background-color: black;
+  
+}
+
+.bullet:hover{
+    background-color: green;
+}
+
+
+@keyframes grow-shrink{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+        background-color: orange;
+    }
+    100%{
+        transforms: scale(1)
+    }
+}
+
+.expanderElement>.expanderButton>.buttonVisualContainer>.bulletDiv>.bullet{
+  animation: grow-shrink 5s infinite forwards; /* Apply animation for 2 seconds, repeat infinitely, alternate direction */
+}
+
+.expanderButtonText{
+color: black;
+align-self: baseline;  
+}
+
+.expanderButtonText{margin-bottom: .5rem;}
+
+.expander{
+    display:none;
+
+}
+
+.expanderContent{
+ display: flex;
+justify-content:space-between;
+gap: 20px;
+width: 1000px;
+margin: auto;
+    margin-bottom: .5rem;
+}
+
+.expanderExpand{
+    display: block;
+}
+
+.expanderCards{
+    width:600px;
+}
+
+
+
+img{
+    width: 450px;
+    align-self: center;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+    body{
+        margin: 2rem 3rem;
+    }
+
+    .expanderContent{
+ display: flex;
+justify-content:space-between;
+gap: 10px;
+width: 600px;
+margin: auto;
+    margin-bottom: .5rem;
+}
+
+ .expanderCards{
+    width:400px;
+}   
+ img{
+    width: 250px;
+    align-self: center;
+}
+}
+
+
+@media only screen and (max-width: 767px){
+    
+body{
+    margin: 0rem auto;
+   width: 360px;
+}
+
+h2,.aboutMe{display: none;}
+
+.resumeBody{
+    width: 320px;
+    margin:0 1rem;; 
+}
+
+.expanderButtonText{
+    width:300px;
+}
+
+    .expanderContent{
+ display: flex;
+ flex-direction: column;
+width: 300px;
+}
+
+.intro{
+    width:250px;
+}
+img{
+    width: 200px;
+}
+
+.summary{
+    width: 250px;
+}
+
+    
+}
